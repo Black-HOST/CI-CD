@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEP 9000 Deployment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --background-color: #f0f2f5;
+            --text-color: #333;
+            --container-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: var(--container-bg);
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px var(--shadow-color);
+            max-width: 600px;
+            width: 90%;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-top: 0;
+        }
+
+        .footer-link {
+            font-weight: 400;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello CI/CD World!</h1>
+        <p>This file was deployed using <a href="https://github.com/Black-HOST/deployer" class="footer-link">Black-HOST/deployer</a> via the  <a href="https://github.com/Black-HOST/ci-cd" class="footer-link">CI/CD Playground</a>.</p>
+    </div>
+</body>
+</html>
