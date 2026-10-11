@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "sftp" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Code Deployment
+        uses: Black-HOST/deployer@v1
+        with:
+          protocol: sftp
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USER }}
+          ssh_key: ${{ secrets.SFTP_KEY }}
+          # the key password, if the key has one; an empty secret is ignored
+          password: ${{ secrets.SFTP_KEY_PASS }}
+          # SFTP paths are real paths, relative to the login's home directory
+          remote_dir: "public_html/sftp"
+          # a custom list replaces the default one, so the dotfile rules stay in front
+          exclude: ".*,.*/,*.md"
