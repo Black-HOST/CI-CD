@@ -9,8 +9,9 @@ Each example lives on its own branch, deploys itself on every push and is live o
 | Branch | Protocol | Auth | Deploys | Live | Guide |
 |---|---|---|---|---|---|
 | [`ftp`](https://github.com/Black-HOST/CI-CD/tree/ftp) | FTP (FTPS) | password | static site to cPanel | [cicd.guide/ftp/](https://cicd.guide/ftp/) | in progress |
+| [`sftp`](https://github.com/Black-HOST/CI-CD/tree/sftp) | SFTP | SSH key | static site to cPanel | [cicd.guide/sftp/](https://cicd.guide/sftp/) | in progress |
 
-Coming next: `sftp` (SSH key), `rsync`, `laravel`, `node`.
+Coming next: `rsync`, `laravel`, `node`.
 
 ## Use an example
 
